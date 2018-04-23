@@ -1,0 +1,9 @@
+{
+    "commandDescription": "Auto-generate Apex classes from Swagger/OpenAPI definition files",
+    "pathFlagDescription": "URL or local file path for Swagger definition file",
+    "outputdirFlagDescription": "local folder for storing the created files",
+    "apiversionFlagDescription": "specify the API version (default to sfdx API version if not set)",
+    "classprefixFlagDescription": "specify a class prefix (defaults to \"Swag\")",
+    "forceFlagDescription": "overwrites existing files"
+  }
+  
