@@ -1,15 +1,16 @@
 import { flags } from '@oclif/command';
 import { join, dirname } from 'path';
 import { SfdxCommand, core } from '@salesforce/command';
+import { SfdxError } from '@salesforce/core';
 
-// core.Messages.importMessagesDirectory(join(__dirname, '..', '..', '..'));
-// const messages = core.Messages.loadMessages(
-//   'sfdx-muenzpraeger-plugin',
-//   'swagger/import'
-// );
+core.Messages.importMessagesDirectory(join(__dirname, '..', '..', '..'));
+const messages = core.Messages.loadMessages(
+  'sfdx-muenzpraeger-plugin',
+  'swagger/import'
+);
 
 export default class Import extends SfdxCommand {
-  public static description = 'Auto-generate Apex classes from Swagger/OpenAPI files.';
+  public static description = messages.getMessage('commandDescription');
 
   public static examples = [
     `$ sfdx muenzpraeger:swagger:import -d . -p http://petstore.swagger.io/v2/swagger.json
@@ -21,36 +22,34 @@ export default class Import extends SfdxCommand {
     help: flags.help({ char: 'h' }),
     path: flags.string({
       char: 'p',
-      description: 'URL or local file path for Swagger definition file.',
+      description: messages.getMessage('flagPathDescription'),
       required: true
     }),
     outputdir: flags.string({
       char: 'd',
-      description: 'local folder for storing the created files.',
+      description: messages.getMessage('flagOutputdirDescription'),
       required: true
     }),
     apiversion: flags.string({
       char: 'a',
       description:
-        'specify the API version (defaults to API version of your DevHub)'
+        messages.getMessage('flagApiversionDescription')
     }),
     classprefix: flags.string({
       char: 'c',
-      description: 'specify a class prefix (defaults to "Swag")'
+      description: messages.getMessage('flagClassprefixDescription')
     }),
     force: flags.boolean({
       char: 'f',
-      description: 'overwrites existing files'
+      description: messages.getMessage('flagForceDescription')
     })
   };
 
   protected static supportsDevhubUsername = true;
 
-  public async run(): Promise<any> {
-    // tslint:disable-line:no-any
+  public async run(): Promise<any> { // tslint:disable-line:no-any
 
     interface Response {
-      isError?: boolean;
       message?: string;
     }
 
@@ -59,9 +58,7 @@ export default class Import extends SfdxCommand {
     const javaInstalled = await checkJava();
 
     if (!javaInstalled) {
-      this.ux.error('A Java installation could not be found.');
-      resp.isError = true;
-      resp.message = 'A Java installation could not be found.';
+      throw new SfdxError(messages.getMessage('errorNoJavaInstallation'));
     }
 
     if (javaInstalled && !this.flags.apiversion) {
@@ -70,12 +67,7 @@ export default class Import extends SfdxCommand {
       if (conn) {
         this.flags.apiversion = conn.getApiVersion();
       } else {
-        this.ux.error(
-          'Could not connect to the DevHub for fetching the API version.'
-        );
-        resp.isError = true;
-        resp.message =
-          'Could not connect to the DevHub for fetching the API version.';
+        throw new SfdxError(messages.getMessage('errorNoDevHubConnection'));
       }
     }
 
@@ -100,13 +92,10 @@ export default class Import extends SfdxCommand {
       }
       const swaggerGen = await runSwaggerJar(script);
       if (swaggerGen) {
-        this.log('Apex classes have been generated.');
-        resp.isError = false;
-        resp.message = 'Apex classes have been generated.';
+        this.log(messages.getMessage('successMessage'));
+        resp.message = messages.getMessage('successMessage');
       } else {
-        this.error('An error occured during class generation.');
-        resp.isError = true;
-        resp.message = 'An error occured during class generation.';
+        throw new SfdxError(messages.getMessage('errorClassGeneration'));
       }
     }
 
@@ -114,14 +103,12 @@ export default class Import extends SfdxCommand {
   }
 }
 
-function checkJava(): any {
-  // tslint:disable-line:no-any
+function checkJava(): any {  // tslint:disable-line:no-any
   const spawn = require('child_process').spawn('java', ['-version']);
   spawn.on('error', function(err: string) {
     return false;
   });
-  spawn.stderr.on('data', function(data: any) {
-    // tslint:disable-line:no-any
+  spawn.stderr.on('data', function(data: any) { // tslint:disable-line:no-any
     data = data.toString().split('\n')[0];
     const javaVersion = new RegExp('java version').test(data)
       ? data.split(' ')[2].replace(/"/g, '')

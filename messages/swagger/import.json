@@ -1,9 +1,14 @@
 {
-    "commandDescription": "Auto-generate Apex classes from Swagger/OpenAPI definition files",
-    "pathFlagDescription": "URL or local file path for Swagger definition file",
-    "outputdirFlagDescription": "local folder for storing the created files",
-    "apiversionFlagDescription": "specify the API version (default to sfdx API version if not set)",
-    "classprefixFlagDescription": "specify a class prefix (defaults to \"Swag\")",
-    "forceFlagDescription": "overwrites existing files"
-  }
-  
+  "commandDescription":
+    "Auto-generate Apex classes from Swagger/OpenAPI definition files",
+  "flagPathDescription": "URL or local file path for Swagger definition file",
+  "flagOutputdirDescription": "local folder for storing the created files",
+  "flagApiversionDescription":
+    "specify the API version (defaults to API version of your DevHub)",
+  "flagClassprefixDescription": "specify a class prefix (defaults to \"Swag\")",
+  "flagForceDescription": "A Java installation could not be found.",
+  "errorNoJavaInstallation": "A Java installation could not be found.",
+  "errorNoDevHubConnection": "Could not connect to the DevHub for fetching the API version.",
+  "errorClassGeneration": "An error occurred during class generation.",
+  "successMessage": "Apex classes have been generated."
+}
