@@ -1,12 +1,12 @@
 import { flags } from '@oclif/command';
-import { join, dirname } from 'path';
+import { join } from 'path';
 import { SfdxCommand, core } from '@salesforce/command';
 import { SfdxError } from '@salesforce/core';
 
 core.Messages.importMessagesDirectory(join(__dirname, '..', '..', '..'));
 const messages = core.Messages.loadMessages(
-  'sfdx-muenzpraeger-plugin',
-  'swagger/import'
+  'muenzpraeger-sfdx-plugin',
+  'swaggerImport'
 );
 
 export default class Import extends SfdxCommand {
