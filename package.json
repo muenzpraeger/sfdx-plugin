@@ -1,7 +1,7 @@
 {
   "name": "muenzpraeger-sfdx-plugin",
   "description": "A plugin for the Salesforce CLI built by René Winkelmeyer.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "René Winkelmeyer @muenzpraeger",
   "bugs": "https://github.com/muenzpraeger/sfdx-plugin/issues",
   "dependencies": {
@@ -9,7 +9,12 @@
     "@oclif/config": "^1.6.3",
     "@oclif/errors": "^1.0.4",
     "@salesforce/command": "^0.1.1",
-    "npm": "^5.8.0"
+    "@types/fs-extra": "^5.0.2",
+    "@types/recursive-readdir": "^2.2.0",
+    "fs-extra": "^6.0.0",
+    "npm": "^5.8.0",
+    "recursive-readdir": "^2.2.2",
+    "replace-in-file": "^3.4.0"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1.13.0",
