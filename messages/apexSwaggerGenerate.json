@@ -1,0 +1,6 @@
+{
+  "commandDescription":
+    "Auto-generate Apex classes from Swagger/OpenAPI definition files",
+  "flagFileDescription": "local file name for Swagger definition file",
+  "flagInstanceDescription": "local folder for storing the created files"
+}
