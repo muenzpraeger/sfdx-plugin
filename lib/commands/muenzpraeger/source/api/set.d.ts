@@ -20,5 +20,6 @@ export default class SourceApiSet extends SfdxCommand {
         apiversion: flags.IOptionFlag<string>;
     };
     protected static supportsDevhubUsername: boolean;
+    protected static requiresProject: boolean;
     run(): Promise<any>;
 }
