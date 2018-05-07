@@ -34,6 +34,7 @@ export default class SourceApiSet extends SfdxCommand {
   };
 
   protected static supportsDevhubUsername = true;
+  protected static requiresProject = true;
 
   public async run(): Promise<any> { // tslint:disable-line:no-any
 
@@ -73,10 +74,7 @@ export default class SourceApiSet extends SfdxCommand {
     const apiRegex = /<apiVersion>[0-9][0-9]\.0<\/apiVersion>/g;
     const apiCurrent = `<apiVersion>${this.flags.apiversion}</apiVersion>`;
     const projectJson = await project.resolveProjectConfig();
-    const basePath = this.configAggregator
-      .getLocalConfig()
-      .getPath()
-      .replace('/.sfdx/sfdx-config.json', '');
+    const basePath = this.project.getPath();
     const packageDirectories: any[] = projectJson['packageDirectories']; // tslint:disable-line:no-any
     const that = this;
     let noChangedFiles = 0;
