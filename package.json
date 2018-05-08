@@ -9,7 +9,8 @@
     "@oclif/config": "^1.6.3",
     "@oclif/errors": "^1.0.4",
     "@salesforce/command": "^0.1.1",
-    "npm": "^5.8.0"
+    "npm": "^5.8.0",
+    "recursive-readdir": "^2.2.2"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1.13.0",

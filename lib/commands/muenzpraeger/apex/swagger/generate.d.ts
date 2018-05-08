@@ -20,7 +20,6 @@ export default class Import extends SfdxCommand {
         file: flags.IOptionFlag<string>;
         instance: flags.IOptionFlag<string>;
     };
-    protected static supportsDevhubUsername: boolean;
-    protected static supportsUsername: boolean;
+    protected static requiresProject: boolean;
     run(): Promise<any>;
 }
