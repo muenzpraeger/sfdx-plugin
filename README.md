@@ -3,8 +3,8 @@ sfdx-plugin
 
 A plugin for the Salesforce CLI built by René Winkelmeyer.
 
-[![Version](https://img.shields.io/npm/v/muenzpraeger-sfdx-plugin.svg)](https://npmjs.org/package/muenzpraeger-sfdx-plugin)
-[![Downloads/week](https://img.shields.io/npm/dw/muenzpraeger-sfdx-plugin.svg)](https://npmjs.org/package/muenzpraeger-sfdx-plugin)
+[![Version](https://img.shields.io/npm/v/@muenzpraeger/sfdx-plugin.svg)](https://www.npmjs.com/package/@muenzpraeger/sfdx-plugin)
+[![Downloads/week](https://img.shields.io/npm/dw/@muenzpraeger/sfdx-plugin.svg)](https://www.npmjs.com/package/@muenzpraeger/sfdx-plugin)
 [![License](https://img.shields.io/npm/l/muenzpraeger-sfdx-plugin.svg)](https://github.com/muenzpraeger/sfdx-plugin/blob/master/package.json)
 
 
@@ -13,7 +13,7 @@ A plugin for the Salesforce CLI built by René Winkelmeyer.
 Install the plugin into your Salesforce CLI using this command:
 
 ```sh-session
-$ sfdx plugins:install muenzpraeger-sfdx-plugin
+$ sfdx plugins:install @muenzpraeger/sfdx-plugin
 ```
 
 You can check a successful installation with ```sfdx plugins```. Updates are applied when executing ```sfdx plugins:update```.
