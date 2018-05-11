@@ -1,5 +1,5 @@
 {
-  "name": "muenzpraeger-sfdx-plugin",
+  "name": "@muenzpraeger/sfdx-plugin",
   "description": "A plugin for the Salesforce CLI built by René Winkelmeyer.",
   "version": "0.2.0",
   "author": "René Winkelmeyer @muenzpraeger",
