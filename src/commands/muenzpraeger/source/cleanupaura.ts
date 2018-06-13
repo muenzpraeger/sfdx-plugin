@@ -1,5 +1,5 @@
 import recursiveReaddir = require('recursive-readdir');
-import { readFileSync, pathExistsSync } from 'fs-extra';
+import { readFileSync, pathExistsSync, removeSync } from 'fs-extra';
 import { join } from 'path';
 import { SfdxCommand, flags, core } from '@salesforce/command';
 import { SfdxError, SfdxUtil, Project } from '@salesforce/core';
@@ -27,11 +27,11 @@ export default class SourceCleanupAura extends SfdxCommand {
     `$ sfdx muenzpraeger:source:cleanupaura
      Make sure that your git commits are up-to-date before you proceed. Do you want to delete boilerplate Aura related files that have not been modified? (y/N) y
      Reading content of package directories
-     36 non-modified boilerplate Aura files have been deleted.
+     36 non-modified boilerplate Aura files have been deleted in package directory 'force-app'.
   `,
     `$ sfdx muenzpraeger:source:cleanupaura -p
      Reading content of package directories
-     36 non-modified boilerplate Aura files have been deleted.
+     36 non-modified boilerplate Aura files have been deleted in package directory 'force-app'.
 `
   ];
 
@@ -100,7 +100,6 @@ export default class SourceCleanupAura extends SfdxCommand {
     const basePath = this.project.getPath();
     const packageDirectories: any[] = projectJson['packageDirectories']; // tslint:disable-line:no-any
     const that = this;
-    let noChangedFiles = 0;
     this.ux.log(messages.getMessage('msgReadingPackageDirectories'));
     if (!this.flags.noprompt) {
       const question = await this.ux.confirm(
@@ -119,6 +118,7 @@ export default class SourceCleanupAura extends SfdxCommand {
         'aura'
       );
       if (pathExistsSync(sourcePath)) {
+        let noChangedFiles = 0;
         const files = recursiveReaddir(sourcePath);
         files
           .then(function(result: string[]) {
@@ -142,6 +142,7 @@ export default class SourceCleanupAura extends SfdxCommand {
               let data = readFileSync(file, 'utf8');
               data = data.toString();
               if (that.isAuraStandardContent(data)) {
+                removeSync(file);
                 resp.files.push(file);
                 noChangedFiles++;
               }
@@ -149,10 +150,10 @@ export default class SourceCleanupAura extends SfdxCommand {
           })
           .then(function() {
             that.ux.log(
-              messages.getMessage('successMessage', [noChangedFiles])
+              messages.getMessage('successMessage', [noChangedFiles, packageConfig.path])
             );
             resp.message = messages.getMessage('successMessage', [
-              noChangedFiles
+              noChangedFiles, packageConfig.path
             ]);
             return resp;
           })

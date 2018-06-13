@@ -76,9 +76,9 @@ export default class SourceApiSet extends SfdxCommand {
     const basePath = this.project.getPath();
     const packageDirectories: any[] = projectJson['packageDirectories']; // tslint:disable-line:no-any
     const that = this;
-    let noChangedFiles = 0;
     this.ux.log(messages.getMessage('msgReadingPackageDirectories'));
     for (const packageConfig of packageDirectories) {
+      let noChangedFiles = 0;
       const sourcePath = join(basePath, packageConfig.path);
       const files = recursiveReaddir(sourcePath);
       files
@@ -114,12 +114,14 @@ export default class SourceApiSet extends SfdxCommand {
           that.ux.log(
             messages.getMessage('successMessage', [
               noChangedFiles,
-              that.flags.apiversion
+              that.flags.apiversion,
+              packageConfig.path
             ])
           );
           resp.message = messages.getMessage('successMessage', [
             noChangedFiles,
-            that.flags.apiversion
+            that.flags.apiversion,
+            packageConfig.path
           ]);
           return resp;
         })

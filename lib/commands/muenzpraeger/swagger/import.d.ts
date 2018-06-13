@@ -1,5 +1,4 @@
-import { flags } from '@oclif/command';
-import { SfdxCommand } from '@salesforce/command';
+import { SfdxCommand, flags } from '@salesforce/command';
 export default class Import extends SfdxCommand {
     static description: string;
     static examples: string[];
