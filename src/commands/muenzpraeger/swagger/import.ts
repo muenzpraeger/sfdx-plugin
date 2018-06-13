@@ -1,6 +1,5 @@
-import { flags } from '@oclif/command';
 import { join, dirname } from 'path';
-import { SfdxCommand, core } from '@salesforce/command';
+import { SfdxCommand, core, flags } from '@salesforce/command';
 
 // core.Messages.importMessagesDirectory(join(__dirname, '..', '..', '..'));
 // const messages = core.Messages.loadMessages(

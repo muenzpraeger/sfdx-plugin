@@ -1,6 +1,13 @@
-import { SfdxCommand, flags } from '@salesforce/command';
-export default class Import extends SfdxCommand {
+import { SfdxCommand } from '@salesforce/command';
+export default class SourceCleanupAura extends SfdxCommand {
     static description: string;
+    static controller: string;
+    static css: string;
+    static helper: string;
+    static design: string;
+    static auradoc: string;
+    static renderer: string;
+    static svg: string;
     static examples: string[];
     protected static flagsConfig: {
         help: {
@@ -16,11 +23,7 @@ export default class Import extends SfdxCommand {
             type: "boolean";
             allowNo: boolean;
         };
-        path: flags.IOptionFlag<string>;
-        outputdir: flags.IOptionFlag<string>;
-        apiversion: flags.IOptionFlag<string>;
-        classprefix: flags.IOptionFlag<string>;
-        force: {
+        noprompt: {
             name: string;
             char?: "A" | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "x" | "y" | "z" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "X" | "Y" | "Z";
             description?: string;
@@ -34,6 +37,8 @@ export default class Import extends SfdxCommand {
             allowNo: boolean;
         };
     };
-    protected static supportsDevhubUsername: boolean;
+    protected static requiresProject: boolean;
+    isAuraFile(file: string): boolean;
+    isAuraStandardContent(fileContent: string): boolean;
     run(): Promise<any>;
 }

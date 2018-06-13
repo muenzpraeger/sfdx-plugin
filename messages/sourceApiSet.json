@@ -5,7 +5,7 @@
     "specify the API version (defaults to API version of your DevHub)",
   "msgNoMetadataInPackageDirectories":
     "No metadata files found in package directories.",
-  "successMessage": "%s files have been set to API version %s.",
+  "successMessage": "%s files have been set to API version %s in package directory '%s'.",
   "msgReadingPackageDirectories": "Reading content of package directories.",
   "errorNoSfdxProject":
     "The command isn't run from within a Salesforce DX project folder.",
