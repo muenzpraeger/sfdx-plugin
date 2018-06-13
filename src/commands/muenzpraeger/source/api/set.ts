@@ -1,8 +1,7 @@
 import recursiveReaddir = require('recursive-readdir');
 import { writeFileSync, readFileSync } from 'fs-extra';
-import { flags } from '@oclif/command';
 import { join } from 'path';
-import { SfdxCommand, core } from '@salesforce/command';
+import { SfdxCommand, core, flags } from '@salesforce/command';
 import { SfdxError, SfdxUtil, Project } from '@salesforce/core';
 
 core.Messages.importMessagesDirectory(join(__dirname, '..', '..', '..'));
@@ -78,9 +77,9 @@ export default class SourceApiSet extends SfdxCommand {
     const packageDirectories: any[] = projectJson['packageDirectories']; // tslint:disable-line:no-any
     const that = this;
     let noChangedFiles = 0;
+    this.ux.log(messages.getMessage('msgReadingPackageDirectories'));
     for (const packageConfig of packageDirectories) {
       const sourcePath = join(basePath, packageConfig.path);
-      this.ux.log(messages.getMessage('msgReadingPackageDirectories'));
       const files = recursiveReaddir(sourcePath);
       files
         .then(function(result: string[]) {
