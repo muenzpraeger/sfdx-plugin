@@ -11,7 +11,7 @@ const messages = core.Messages.loadMessages(
 );
 
 export default class SourceCleanupAura extends SfdxCommand {
-  public static description = '[DEPRECATED, use mpzr instead of muenzpraeger] ' + messages.getMessage('commandDescription');
+  public static description = messages.getMessage('commandDescription');
 
   public static controller = '({myAction:function(component,event,helper){}})';
   public static css = '.THIS{}';
@@ -155,7 +155,6 @@ export default class SourceCleanupAura extends SfdxCommand {
             resp.message = messages.getMessage('successMessage', [
               noChangedFiles, packageConfig.path
             ]);
-            this.ux.log('[DEPRECATED, use mpzr instead of muenzpraeger]');
             return resp;
           })
           .catch(function(error) {

@@ -3,15 +3,15 @@ import { SfdxCommand, core, flags } from '@salesforce/command';
 
 // core.Messages.importMessagesDirectory(join(__dirname, '..', '..', '..'));
 // const messages = core.Messages.loadMessages(
-//   'sfdx-muenzpraeger-plugin',
+//   'sfdx-mzpr-plugin',
 //   'swagger/import'
 // );
 
 export default class Import extends SfdxCommand {
-  public static description = '[DEPRECATED, use mpzr instead of muenzpraeger] ' + 'Auto-generate Apex classes from Swagger/OpenAPI files.';
+  public static description = 'Auto-generate Apex classes from Swagger/OpenAPI files.';
 
   public static examples = [
-    `$ sfdx muenzpraeger:swagger:import -d . -p http://petstore.swagger.io/v2/swagger.json
+    `$ sfdx mzpr:swagger:import -d . -p http://petstore.swagger.io/v2/swagger.json
   Apex classes have been generated.
   `
   ];
@@ -82,7 +82,7 @@ export default class Import extends SfdxCommand {
 
     if (javaInstalled && this.flags.apiversion) {
       let pluginDir = __dirname;
-      pluginDir = pluginDir.replace('/lib/commands/muenzpraeger/swagger', '');
+      pluginDir = pluginDir.replace('/lib/commands/mzpr/swagger', '');
       const jarPath = join(pluginDir, 'resources', 'swagger-codegen-cli.jar');
       let script = `java -jar ${jarPath} generate -i ${
         this.flags.path
@@ -107,7 +107,6 @@ export default class Import extends SfdxCommand {
         resp.isError = true;
         resp.message = 'An error occured during class generation.';
       }
-      this.ux.log('[DEPRECATED, use mpzr instead of muenzpraeger]');
     }
 
     return resp;

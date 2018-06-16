@@ -6,19 +6,19 @@ import { SfdxError, SfdxUtil, Project } from '@salesforce/core';
 
 core.Messages.importMessagesDirectory(join(__dirname, '..', '..', '..'));
 const messages = core.Messages.loadMessages(
-  '@muenzpraeger/sfdx-plugin',
+  '@mzpr/sfdx-plugin',
   'sourceApiSet'
 );
 
 export default class SourceApiSet extends SfdxCommand {
-  public static description = '[DEPRECATED, use mpzr instead of muenzpraeger] ' + messages.getMessage('commandDescription');
+  public static description = messages.getMessage('commandDescription');
 
   public static examples = [
-    `$ sfdx muenzpraeger:source:api:set
+    `$ sfdx mzpr:source:api:set
     Reading content of package directories
     45 files have been set to API version 42.0.
   `,
-    `$ sfdx muenzpraeger:source:api:set -a 41.0
+    `$ sfdx mzpr:source:api:set -a 41.0
     Reading content of package directories
     45 files have been set to API version 41.0.
   `
@@ -123,7 +123,6 @@ export default class SourceApiSet extends SfdxCommand {
             that.flags.apiversion,
             packageConfig.path
           ]);
-          this.ux.log('[DEPRECATED, use mpzr instead of muenzpraeger]');
           return resp;
         })
         .catch(function(error) {
