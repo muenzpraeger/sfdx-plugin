@@ -8,7 +8,7 @@ import { SfdxCommand, core, flags } from '@salesforce/command';
 // );
 
 export default class Import extends SfdxCommand {
-  public static description = '[DEPRECATED, use mpzr instead of muenzpraeger] ' + 'Auto-generate Apex classes from Swagger/OpenAPI files.';
+  public static description = '[DEPRECATED, use mzpr instead of muenzpraeger] ' + 'Auto-generate Apex classes from Swagger/OpenAPI files.';
 
   public static examples = [
     `$ sfdx muenzpraeger:swagger:import -d . -p http://petstore.swagger.io/v2/swagger.json
@@ -107,7 +107,7 @@ export default class Import extends SfdxCommand {
         resp.isError = true;
         resp.message = 'An error occured during class generation.';
       }
-      this.ux.log('[DEPRECATED, use mpzr instead of muenzpraeger]');
+      this.ux.log('[DEPRECATED, use mzpr instead of muenzpraeger]');
     }
 
     return resp;

@@ -6,12 +6,12 @@ import { SfdxError, SfdxUtil, Project } from '@salesforce/core';
 
 core.Messages.importMessagesDirectory(join(__dirname, '..', '..', '..'));
 const messages = core.Messages.loadMessages(
-  '@muenzpraeger/sfdx-plugin',
+  '@mzpr/sfdx-plugin',
   'sourceCleanupAura'
 );
 
 export default class SourceCleanupAura extends SfdxCommand {
-  public static description = '[DEPRECATED, use mpzr instead of muenzpraeger] ' + messages.getMessage('commandDescription');
+  public static description = '[DEPRECATED, use mzpr instead of muenzpraeger] ' + messages.getMessage('commandDescription');
 
   public static controller = '({myAction:function(component,event,helper){}})';
   public static css = '.THIS{}';
@@ -155,7 +155,7 @@ export default class SourceCleanupAura extends SfdxCommand {
             resp.message = messages.getMessage('successMessage', [
               noChangedFiles, packageConfig.path
             ]);
-            this.ux.log('[DEPRECATED, use mpzr instead of muenzpraeger]');
+            this.ux.log('[DEPRECATED, use mzpr instead of muenzpraeger]');
             return resp;
           })
           .catch(function(error) {

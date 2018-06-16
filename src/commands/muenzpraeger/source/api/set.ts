@@ -6,12 +6,12 @@ import { SfdxError, SfdxUtil, Project } from '@salesforce/core';
 
 core.Messages.importMessagesDirectory(join(__dirname, '..', '..', '..'));
 const messages = core.Messages.loadMessages(
-  '@muenzpraeger/sfdx-plugin',
+  '@mzpr/sfdx-plugin',
   'sourceApiSet'
 );
 
 export default class SourceApiSet extends SfdxCommand {
-  public static description = '[DEPRECATED, use mpzr instead of muenzpraeger] ' + messages.getMessage('commandDescription');
+  public static description = '[DEPRECATED, use mzpr instead of muenzpraeger] ' + messages.getMessage('commandDescription');
 
   public static examples = [
     `$ sfdx muenzpraeger:source:api:set
@@ -123,7 +123,7 @@ export default class SourceApiSet extends SfdxCommand {
             that.flags.apiversion,
             packageConfig.path
           ]);
-          this.ux.log('[DEPRECATED, use mpzr instead of muenzpraeger]');
+          this.ux.log('[DEPRECATED, use mzpr instead of muenzpraeger]');
           return resp;
         })
         .catch(function(error) {

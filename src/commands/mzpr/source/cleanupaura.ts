@@ -6,7 +6,7 @@ import { SfdxError, SfdxUtil, Project } from '@salesforce/core';
 
 core.Messages.importMessagesDirectory(join(__dirname, '..', '..', '..'));
 const messages = core.Messages.loadMessages(
-  '@muenzpraeger/sfdx-plugin',
+  '@mzpr/sfdx-plugin',
   'sourceCleanupAura'
 );
 
