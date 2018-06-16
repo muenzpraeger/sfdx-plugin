@@ -22,17 +22,17 @@ You can check a successful installation with `sfdx plugins`. Updates are applied
 
 <!-- commands -->
 
-- [sfdx muenzpraeger:source:api:set](#sfdx-muenzpraegersourceapiset)
-- [sfdx muenzpraeger:source:cleanupaura](#sfdx-muenzpraegersourcecleanupaura)
-- [sfdx muenzpraeger:swagger:import](#sfdx-muenzpraegerswaggerimport)
+- [`sfdx mzpr:source:api:set`](#sfdx-mzprsourceapiset)
+- [`sfdx mzpr:source:cleanupaura`](#sfdx-mzprsourcecleanupaura)
+- [`sfdx mzpr:swagger:import`](#sfdx-mzprswaggerimport)
 
-## sfdx muenzpraeger:source:api:set
+## `sfdx mzpr:source:api:set`
 
 Upgrades the current project and all metadata to the latest API version
 
 ```
 USAGE
-  $ sfdx muenzpraeger:source:api:set
+  $ sfdx mzpr:source:api:set
 
 OPTIONS
   -a, --apiversion=apiversion                      specify the API version (defaults to API version of your DevHub)
@@ -42,22 +42,22 @@ OPTIONS
   --loglevel=(trace|debug|info|warn|error|fatal)   logging level for this command invocation
 
 EXAMPLES
-  $ sfdx muenzpraeger:source:api:set
+  $ sfdx mzpr:source:api:set
        Reading content of package directories
        45 files have been set to API version 42.0.
 
-  $ sfdx muenzpraeger:source:api:set -a 41.0
+  $ sfdx mzpr:source:api:set -a 41.0
        Reading content of package directories
        45 files have been set to API version 41.0.
 ```
 
-## sfdx muenzpraeger:source:cleanupaura
+## `sfdx mzpr:source:cleanupaura`
 
 Removes all boilerplate Aura related files that have not been modified
 
 ```
 USAGE
-  $ sfdx muenzpraeger:source:cleanupaura
+  $ sfdx mzpr:source:cleanupaura
 
 OPTIONS
   -h, --help                                      show CLI help
@@ -77,13 +77,13 @@ EXAMPLES
         36 non-modified boilerplate Aura files have been deleted in package directory 'force-app'.
 ```
 
-## sfdx muenzpraeger:swagger:import
+## `sfdx mzpr:swagger:import`
 
 Auto-generate Apex classes from Swagger/OpenAPI files.
 
 ```
 USAGE
-  $ sfdx muenzpraeger:swagger:import
+  $ sfdx mzpr:swagger:import
 
 OPTIONS
   -a, --apiversion=apiversion                      specify the API version (defaults to API version of your DevHub)
@@ -97,7 +97,7 @@ OPTIONS
   --loglevel=(trace|debug|info|warn|error|fatal)   logging level for this command invocation
 
 EXAMPLE
-  $ sfdx muenzpraeger:swagger:import -d . -p http://petstore.swagger.io/v2/swagger.json
+  $ sfdx mzpr:swagger:import -d . -p http://petstore.swagger.io/v2/swagger.json
      Apex classes have been generated.
 ```
 

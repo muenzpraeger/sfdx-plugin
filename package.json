@@ -1,5 +1,5 @@
 {
-  "name": "@mzpr/sfdx-plugin",
+  "name": "@muenzpraeger/sfdx-plugin",
   "description": "A plugin for the Salesforce CLI built by René Winkelmeyer.",
   "version": "0.4.0",
   "author": "René Winkelmeyer @muenzpraeger",
@@ -43,7 +43,8 @@
     ".oclif.manifest.json",
     "/lib",
     "/messages",
-    "/resources"
+    "/resources",
+    "/custom_types"
   ],
   "homepage": "https://github.com/muenzpraeger/sfdx-plugin",
   "keywords": [
@@ -62,7 +63,7 @@
     "postpack": "rm -f .oclif.manifest.json",
     "posttest": "tsc -p test --noEmit && tslint -p test -t stylish",
     "prepack": "rm -rf lib && tsc && oclif-dev manifest",
-    "prepare": "rm -rf lib && tsc && oclif-dev manifest && oclif-dev readme",
+    "prepare": "rm -rf lib && tsc && oclif-dev manifest",
     "test": "mocha --forbid-only \"test/**/*.test.ts\"",
     "version": "oclif-dev readme && git add README.md"
   }

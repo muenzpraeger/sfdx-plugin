@@ -1,0 +1,15 @@
+{
+  "commandDescription":
+    "Auto-generate Apex classes from RAML definition files (for Mulesoft Anypoint)",
+  "flagPathDescription": "URL or local file path for RAML definition file",
+  "flagOutputdirDescription": "local folder for storing the created files",
+  "flagApiversionDescription":
+    "specify the API version (default to sfdx API version if not set)",
+  "flagClassprefixDescription": "specify a class prefix (defaults to \"Raml\")",
+  "flagForceDescription": "overwrites existing files",
+  "errorNoJavaInstallation": "A Java installation could not be found.",
+  "errorNoDevHubConnection":
+    "Could not connect to the DevHub for fetching the API version.",
+  "errorClassGeneration": "An error occurred during class generation.",
+  "successMessage": "Apex classes have been generated."
+}
