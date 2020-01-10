@@ -251,9 +251,9 @@
   version "5.2.2"
   resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-5.2.2.tgz#202d2b8fe1364c5b617b439b26a54f0e75eac0a7"
 
-"@types/mustache@^0.8.30":
-  version "0.8.30"
-  resolved "https://registry.yarnpkg.com/@types/mustache/-/mustache-0.8.30.tgz#65e479073bc15e8ac834347f8f311b24220a277d"
+"@types/mustache@^0.8.32":
+  version "0.8.32"
+  resolved "https://registry.yarnpkg.com/@types/mustache/-/mustache-0.8.32.tgz#7db3b81f2bf450bd38805f596d20eca97c4ed595"
 
 "@types/nock@*":
   version "11.1.0"
