@@ -12,7 +12,7 @@
     "@types/fs-extra": "^5.0.2",
     "@types/mustache": "^0.8.30",
     "@types/recursive-readdir": "^2.2.0",
-    "fs-extra": "^6.0.0",
+    "fs-extra": "^8.1.0",
     "mustache": "^2.3.0",
     "npm": "^5.8.0",
     "recursive-readdir": "^2.2.2",
