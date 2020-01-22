@@ -48,11 +48,12 @@
     semver "^5.5.0"
 
 "@oclif/config@1", "@oclif/config@^1.6.27":
-  version "1.6.28"
-  resolved "https://registry.yarnpkg.com/@oclif/config/-/config-1.6.28.tgz#bfda0718ba5dfbdeb364350990ed79540f9c3d0b"
+  version "1.13.3"
+  resolved "https://registry.yarnpkg.com/@oclif/config/-/config-1.13.3.tgz#1b13e18d0e4242ddbd9cbd100f0eec819aa2bf8c"
   dependencies:
-    debug "^3.1.0"
-    tslib "^1.9.2"
+    "@oclif/parser" "^3.8.0"
+    debug "^4.1.1"
+    tslib "^1.9.3"
 
 "@oclif/dev-cli@1":
   version "1.13.31"
@@ -91,7 +92,7 @@
   dependencies:
     "@heroku/linewrap" "^1.0.0"
 
-"@oclif/parser@^3.2.9", "@oclif/parser@^3.7.3":
+"@oclif/parser@^3.2.9", "@oclif/parser@^3.7.3", "@oclif/parser@^3.8.0":
   version "3.8.4"
   resolved "https://registry.yarnpkg.com/@oclif/parser/-/parser-3.8.4.tgz#1a90fc770a42792e574fb896325618aebbe8c9e4"
   dependencies:
