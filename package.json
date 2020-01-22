@@ -30,7 +30,7 @@
     "chai": "4",
     "globby": "11",
     "mocha": "5",
-    "sinon": "5",
+    "sinon": "8",
     "ts-node": "8",
     "tslib": "1",
     "typescript": "2.8"
