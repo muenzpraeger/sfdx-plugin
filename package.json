@@ -24,7 +24,7 @@
     "@oclif/test": "^1.2.5",
     "@salesforce/dev-config": "1.0.4",
     "@types/chai": "4",
-    "@types/jsforce": "1.8.9",
+    "@types/jsforce": "1.9.13",
     "@types/mocha": "5",
     "@types/node": "9",
     "chai": "4",
