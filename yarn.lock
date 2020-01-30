@@ -122,9 +122,9 @@
   dependencies:
     fancy-test "^1.4.3"
 
-"@salesforce/command@^2.1.4":
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/@salesforce/command/-/command-2.1.4.tgz#11efaf5a2d528c24e642d9fed18649377594d09e"
+"@salesforce/command@^2.1.5":
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/@salesforce/command/-/command-2.1.5.tgz#55c45d59becc3d2bf0d0afeabbafec3b6917f96e"
   dependencies:
     "@oclif/command" "^1.5.17"
     "@oclif/errors" "^1.2.2"
