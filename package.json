@@ -33,7 +33,7 @@
     "sinon": "9",
     "ts-node": "8",
     "tslib": "1",
-    "typescript": "3.7"
+    "typescript": "3.8"
   },
   "engines": {
     "node": ">=8.0.0"
