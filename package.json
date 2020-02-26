@@ -10,7 +10,7 @@
     "@oclif/errors": "1",
     "@salesforce/command": "^3.0.0",
     "@types/fs-extra": "^8.1.0",
-    "@types/mustache": "^4.0.0",
+    "@types/mustache": "^4.0.1",
     "@types/recursive-readdir": "^2.2.0",
     "fs-extra": "^8.1.0",
     "mustache": "^4.0.0",
