@@ -1887,9 +1887,9 @@ he@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
 
-hosted-git-info@^2.1.4, hosted-git-info@^2.7.1, hosted-git-info@^2.8.6:
-  version "2.8.6"
-  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.6.tgz#3a6e6d0324c5371fc8c7ba7175e1e5d14578724d"
+hosted-git-info@^2.1.4, hosted-git-info@^2.7.1, hosted-git-info@^2.8.7:
+  version "2.8.7"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.7.tgz#4d2e0d5248e1cfabc984b0f6a6d75fe36e679511"
 
 http-cache-semantics@^3.8.1:
   version "3.8.1"
@@ -3179,9 +3179,9 @@ npm-user-validate@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/npm-user-validate/-/npm-user-validate-1.0.0.tgz#8ceca0f5cea04d4e93519ef72d0557a75122e951"
 
-npm@^6.14.0:
-  version "6.14.0"
-  resolved "https://registry.yarnpkg.com/npm/-/npm-6.14.0.tgz#636cc8ca97946a7c250bb54bb2161381011f301e"
+npm@^6.14.1:
+  version "6.14.1"
+  resolved "https://registry.yarnpkg.com/npm/-/npm-6.14.1.tgz#3b80f6f1aa11a9868860dcf897665f80ab38a204"
   dependencies:
     JSONStream "^1.3.5"
     abbrev "~1.1.1"
@@ -3214,7 +3214,7 @@ npm@^6.14.0:
     glob "^7.1.4"
     graceful-fs "^4.2.3"
     has-unicode "~2.0.1"
-    hosted-git-info "^2.8.6"
+    hosted-git-info "^2.8.7"
     iferr "^1.0.2"
     imurmurhash "*"
     infer-owner "^1.0.4"
