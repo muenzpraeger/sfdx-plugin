@@ -14,7 +14,7 @@
     "@types/recursive-readdir": "^2.2.0",
     "fs-extra": "^8.1.0",
     "mustache": "^4.0.0",
-    "npm": "^6.14.0",
+    "npm": "^6.14.1",
     "recursive-readdir": "^2.2.2",
     "replace-in-file": "^5.0.2"
   },
