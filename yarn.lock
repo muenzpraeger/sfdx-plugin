@@ -2888,7 +2888,7 @@ mkdirp@0.5.1:
   dependencies:
     minimist "0.0.8"
 
-mkdirp@0.5.3, mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@~0.5.1:
+mkdirp@0.5.3, mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@^0.5.3, mkdirp@~0.5.0, mkdirp@~0.5.1:
   version "0.5.3"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.3.tgz#5a514b7179259287952881e94410ec5465659f8c"
   dependencies:
@@ -3189,9 +3189,9 @@ npm-user-validate@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/npm-user-validate/-/npm-user-validate-1.0.0.tgz#8ceca0f5cea04d4e93519ef72d0557a75122e951"
 
-npm@^6.14.2:
-  version "6.14.2"
-  resolved "https://registry.yarnpkg.com/npm/-/npm-6.14.2.tgz#f057d35cd4792c4c511bb1fa332edb43143d07b0"
+npm@^6.14.3:
+  version "6.14.3"
+  resolved "https://registry.yarnpkg.com/npm/-/npm-6.14.3.tgz#a122618543c6670765cf5e827cd996b5552f9b65"
   dependencies:
     JSONStream "^1.3.5"
     abbrev "~1.1.1"
@@ -3259,7 +3259,7 @@ npm@^6.14.2:
     lru-cache "^5.1.1"
     meant "~1.0.1"
     mississippi "^3.0.0"
-    mkdirp "~0.5.1"
+    mkdirp "^0.5.3"
     move-concurrently "^1.0.1"
     node-gyp "^5.1.0"
     nopt "~4.0.1"
@@ -3293,7 +3293,7 @@ npm@^6.14.2:
     readdir-scoped-modules "^1.1.0"
     request "^2.88.0"
     retry "^0.12.0"
-    rimraf "^2.6.3"
+    rimraf "^2.7.1"
     safe-buffer "^5.1.2"
     semver "^5.7.1"
     sha "^3.0.0"
@@ -3957,7 +3957,7 @@ reusify@^1.0.0:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/reusify/-/reusify-1.0.4.tgz#90da382b1e126efc02146e90845a88db12925d76"
 
-rimraf@^2.5.2, rimraf@^2.5.4, rimraf@^2.6.2, rimraf@^2.6.3:
+rimraf@^2.5.2, rimraf@^2.5.4, rimraf@^2.6.2, rimraf@^2.6.3, rimraf@^2.7.1:
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.7.1.tgz#35797f13a7fdadc566142c29d4f07ccad483e3ec"
   dependencies:
