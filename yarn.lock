@@ -264,9 +264,9 @@
   dependencies:
     "@types/node" "*"
 
-"@types/jsforce@1.9.13":
-  version "1.9.13"
-  resolved "https://registry.yarnpkg.com/@types/jsforce/-/jsforce-1.9.13.tgz#d648b290c7a96d0ca0846e3d0e5e6b4497e2c05b"
+"@types/jsforce@1.9.14":
+  version "1.9.14"
+  resolved "https://registry.yarnpkg.com/@types/jsforce/-/jsforce-1.9.14.tgz#746d46c852dbfb718b9f5bfea489239425a9dab4"
 
 "@types/jsforce@1.9.2":
   version "1.9.2"
