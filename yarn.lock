@@ -53,8 +53,8 @@
     semver "^5.6.0"
 
 "@oclif/config@1", "@oclif/config@^1", "@oclif/config@^1.12.12":
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/@oclif/config/-/config-1.14.0.tgz#0af93facd5c5087f804489f1603c4f3bc0c45014"
+  version "1.15.1"
+  resolved "https://registry.yarnpkg.com/@oclif/config/-/config-1.15.1.tgz#39950c70811ab82d75bb3cdb33679ed0a4c21c57"
   dependencies:
     "@oclif/errors" "^1.0.0"
     "@oclif/parser" "^3.8.0"
