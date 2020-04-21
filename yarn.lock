@@ -42,8 +42,8 @@
     fastq "^1.6.0"
 
 "@oclif/command@1", "@oclif/command@^1.5.1", "@oclif/command@^1.5.13", "@oclif/command@^1.5.17":
-  version "1.5.19"
-  resolved "https://registry.yarnpkg.com/@oclif/command/-/command-1.5.19.tgz#13f472450eb83bd6c6871a164c03eadb5e1a07ed"
+  version "1.5.20"
+  resolved "https://registry.yarnpkg.com/@oclif/command/-/command-1.5.20.tgz#bb0693586d7d66a457c49b719e394c02ff0169a7"
   dependencies:
     "@oclif/config" "^1"
     "@oclif/errors" "^1.2.2"
