@@ -16,7 +16,7 @@
     "mustache": "^4.0.1",
     "npm": "^6.14.4",
     "recursive-readdir": "^2.2.2",
-    "replace-in-file": "^5.0.2"
+    "replace-in-file": "^6.0.0"
   },
   "devDependencies": {
     "@oclif/dev-cli": "1",
