@@ -307,8 +307,8 @@
     nock "*"
 
 "@types/node@*", "@types/node@13":
-  version "13.13.4"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.13.4.tgz#1581d6c16e3d4803eb079c87d4ac893ee7501c2c"
+  version "13.13.5"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.13.5.tgz#96ec3b0afafd64a4ccea9107b75bf8489f0e5765"
 
 "@types/recursive-readdir@^2.2.0":
   version "2.2.0"
