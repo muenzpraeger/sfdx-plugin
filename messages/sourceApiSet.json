@@ -1,16 +1,10 @@
 {
-  "commandDescription":
-    "Upgrades the current project and all metadata to the latest API version",
-  "flagApiversionDescription":
-    "specify the API version (defaults to API version of your DevHub)",
-  "msgNoMetadataInPackageDirectories":
-    "No metadata files found in package directories.",
-  "successMessage": "%s files have been set to API version %s in package directory '%s'.",
-  "msgReadingPackageDirectories": "Reading content of package directories.",
-  "errorNoSfdxProject":
-    "The command isn't run from within a Salesforce DX project folder.",
-  "errorInvalidApiVersionFormat":
-    "The provided API version format is invalid: %O",
-  "errorDevHubConnection":
-    "Could not connect to the DevHub for fetching the API version."
+    "commandDescription": "Upgrades the current project and all metadata to the latest API version",
+    "flagApiversionDescription": "specify the API version (defaults to API version of your DevHub)",
+    "msgNoMetadataInPackageDirectories": "No metadata files found in package directories.",
+    "successMessage": "%s files have been set to API version %s in package directory '%s'.",
+    "msgReadingPackageDirectories": "Reading content of package directories.",
+    "errorNoSfdxProject": "The command isn't run from within a Salesforce DX project folder.",
+    "errorInvalidApiVersionFormat": "The provided API version format is invalid: %O",
+    "errorDevHubConnection": "Could not connect to the DevHub for fetching the API version."
 }

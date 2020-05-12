@@ -22,9 +22,9 @@ You can check a successful installation with `sfdx plugins`. Updates are applied
 
 <!-- commands -->
 
-- [sfdx muenzpraeger:source:api:set](#sfdx-muenzpraegersourceapiset)
-- [sfdx muenzpraeger:source:cleanupaura](#sfdx-muenzpraegersourcecleanupaura)
-- [sfdx muenzpraeger:swagger:import](#sfdx-muenzpraegerswaggerimport)
+-   [sfdx muenzpraeger:source:api:set](#sfdx-muenzpraegersourceapiset)
+-   [sfdx muenzpraeger:source:cleanupaura](#sfdx-muenzpraegersourcecleanupaura)
+-   [sfdx muenzpraeger:swagger:import](#sfdx-muenzpraegerswaggerimport)
 
 ## sfdx muenzpraeger:source:api:set
 

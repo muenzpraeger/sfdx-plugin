@@ -1,13 +1,9 @@
 {
-  "commandDescription":
-    "Removes all boilerplate Aura related files that have not been modified",
-  "noPromptDescription": "no prompt for confirm deletion",
-  "questionDeletionPrompt":
-    "Make sure that your git commits are up-to-date before you proceed. Do you want to delete boilerplate Aura related files that have not been modified?",
-  "msgNoAuraFilesInPackageDirectories":
-    "No Aura files found in package directories.",
-  "successMessage": "%s non-modified boilerplate Aura files have been deleted in package directory '%s'.",
-  "msgReadingPackageDirectories": "Reading content of package directories.",
-  "errorNoSfdxProject":
-    "The command isn't run from within a Salesforce DX project folder."
+    "commandDescription": "Removes all boilerplate Aura related files that have not been modified",
+    "noPromptDescription": "no prompt for confirm deletion",
+    "questionDeletionPrompt": "Make sure that your git commits are up-to-date before you proceed. Do you want to delete boilerplate Aura related files that have not been modified?",
+    "msgNoAuraFilesInPackageDirectories": "No Aura files found in package directories.",
+    "successMessage": "%s non-modified boilerplate Aura files have been deleted in package directory '%s'.",
+    "msgReadingPackageDirectories": "Reading content of package directories.",
+    "errorNoSfdxProject": "The command isn't run from within a Salesforce DX project folder."
 }

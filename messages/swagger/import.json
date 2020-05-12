@@ -5,5 +5,4 @@
     "apiversionFlagDescription": "specify the API version (default to sfdx API version if not set)",
     "classprefixFlagDescription": "specify a class prefix (defaults to \"Swag\")",
     "forceFlagDescription": "overwrites existing files"
-  }
-  
+}
