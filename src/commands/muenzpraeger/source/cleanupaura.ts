@@ -2,7 +2,7 @@ import recursiveReaddir = require('recursive-readdir');
 import { readFileSync, pathExistsSync, removeSync } from 'fs-extra';
 import { join } from 'path';
 import { SfdxCommand, flags, core } from '@salesforce/command';
-import { SfdxError, SfdxUtil, Project } from '@salesforce/core';
+import { SfdxError, SfdxProject } from '@salesforce/core';
 
 core.Messages.importMessagesDirectory(join(__dirname, '..', '..', '..'));
 const messages = core.Messages.loadMessages(
@@ -92,7 +92,7 @@ export default class SourceCleanupAura extends SfdxCommand {
 
         const resp: Response = {};
 
-        const project = await Project.resolve();
+        const project = await SfdxProject.resolve();
 
         if (!project) {
             throw new SfdxError(messages.getMessage('errorNoSfdxProject'));
@@ -100,7 +100,7 @@ export default class SourceCleanupAura extends SfdxCommand {
 
         const projectJson = await project.resolveProjectConfig();
         const basePath = this.project.getPath();
-        const packageDirectories: any[] = projectJson['packageDirectories']; // tslint:disable-line:no-any
+        const packageDirectories: any = projectJson['packageDirectories']; // tslint:disable-line:no-any
         const that = this;
         this.ux.log(messages.getMessage('msgReadingPackageDirectories'));
         if (!this.flags.noprompt) {

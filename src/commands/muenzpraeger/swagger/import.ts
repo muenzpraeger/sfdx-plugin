@@ -29,11 +29,6 @@ export default class Import extends SfdxCommand {
             description: 'local folder for storing the created files.',
             required: true
         }),
-        apiversion: flags.string({
-            char: 'a',
-            description:
-                'specify the API version (defaults to API version of your DevHub)'
-        }),
         classprefix: flags.string({
             char: 'c',
             description: 'specify a class prefix (defaults to "Swag")'

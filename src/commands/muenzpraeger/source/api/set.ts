@@ -2,7 +2,8 @@ import recursiveReaddir = require('recursive-readdir');
 import { writeFileSync, readFileSync } from 'fs-extra';
 import { join } from 'path';
 import { SfdxCommand, core, flags } from '@salesforce/command';
-import { SfdxError, SfdxUtil, Project } from '@salesforce/core';
+import { SfdxError, SfdxProject } from '@salesforce/core';
+import * as fs from 'fs-extra';
 
 core.Messages.importMessagesDirectory(join(__dirname, '..', '..', '..'));
 const messages = core.Messages.loadMessages(
@@ -25,11 +26,11 @@ export default class SourceApiSet extends SfdxCommand {
     ];
 
     protected static flagsConfig = {
-        help: flags.help({ char: 'h' }),
-        apiversion: flags.string({
-            char: 'a',
-            description: messages.getMessage('flagApiversionDescription')
-        })
+        help: flags.help({ char: 'h' })
+        // apiversion: flags.string({
+        //     char: 'a',
+        //     description: messages.getMessage('flagApiversionDescription')
+        // })
     };
 
     protected static supportsDevhubUsername = true;
@@ -45,21 +46,10 @@ export default class SourceApiSet extends SfdxCommand {
 
         const resp: Response = {};
 
-        const project = await Project.resolve();
+        const project = await SfdxProject.resolve();
 
         if (!project) {
             throw new SfdxError(messages.getMessage('errorNoSfdxProject'));
-        }
-
-        if (
-            this.flags.apiversion &&
-            !SfdxUtil.validateApiVersion(this.flags.apiversion)
-        ) {
-            throw new SfdxError(
-                messages.getMessage('errorInvalidApiVersionFormat', [
-                    this.flags.apiversion
-                ])
-            );
         }
 
         if (!this.flags.apiversion) {
@@ -75,9 +65,9 @@ export default class SourceApiSet extends SfdxCommand {
         }
         const apiRegex = /<apiVersion>[0-9][0-9]\.0<\/apiVersion>/g;
         const apiCurrent = `<apiVersion>${this.flags.apiversion}</apiVersion>`;
-        const projectJson = await project.resolveProjectConfig();
+        const projectJson = await fs.readJson(await project.getPath());
         const basePath = this.project.getPath();
-        const packageDirectories: any[] = projectJson['packageDirectories']; // tslint:disable-line:no-any
+        const packageDirectories: any[] = projectJson.packageDirectories;
         const that = this;
         this.ux.log(messages.getMessage('msgReadingPackageDirectories'));
         for (const packageConfig of packageDirectories) {
