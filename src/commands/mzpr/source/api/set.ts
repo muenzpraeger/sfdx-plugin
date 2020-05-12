@@ -4,6 +4,7 @@ import { join } from 'path';
 import { SfdxCommand, core, flags } from '@salesforce/command';
 import { SfdxError, SfdxProject } from '@salesforce/core';
 import * as fs from 'fs-extra';
+import * as path from 'path';
 
 core.Messages.importMessagesDirectory(join(__dirname, '..', '..', '..'));
 const messages = core.Messages.loadMessages(
@@ -15,11 +16,11 @@ export default class SourceApiSet extends SfdxCommand {
     public static description = messages.getMessage('commandDescription');
 
     public static examples = [
-        `$ sfdx muenzpraeger:source:api:set
+        `$ sfdx mzpr:source:api:set
     Reading content of package directories
     45 files have been set to API version 42.0.
   `,
-        `$ sfdx muenzpraeger:source:api:set -a 41.0
+        `$ sfdx mzpr:source:api:set -a 41.0
     Reading content of package directories
     45 files have been set to API version 41.0.
   `
@@ -65,8 +66,10 @@ export default class SourceApiSet extends SfdxCommand {
         }
         const apiRegex = /<apiVersion>[0-9][0-9]\.0<\/apiVersion>/g;
         const apiCurrent = `<apiVersion>${this.flags.apiversion}</apiVersion>`;
-        const projectJson = await fs.readJson(await project.getPath());
         const basePath = this.project.getPath();
+        const projectJson = await fs.readJson(
+            path.resolve(basePath, 'sfdx-project.json')
+        );
         const packageDirectories: any[] = projectJson.packageDirectories;
         const that = this;
         this.ux.log(messages.getMessage('msgReadingPackageDirectories'));

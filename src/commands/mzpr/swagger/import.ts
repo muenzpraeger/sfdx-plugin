@@ -12,7 +12,7 @@ export default class Import extends SfdxCommand {
         'Auto-generate Apex classes from Swagger/OpenAPI files.';
 
     public static examples = [
-        `$ sfdx muenzpraeger:swagger:import -d . -p http://petstore.swagger.io/v2/swagger.json
+        `$ sfdx mzpr:swagger:import -d . -p http://petstore.swagger.io/v2/swagger.json
   Apex classes have been generated.
   `
     ];
@@ -78,14 +78,12 @@ export default class Import extends SfdxCommand {
 
         if (javaInstalled && this.flags.apiversion) {
             let pluginDir = __dirname;
-            pluginDir = pluginDir.replace(
-                '/lib/commands/muenzpraeger/swagger',
-                ''
-            );
+            pluginDir = pluginDir.replace('/lib/commands/mzpr/swagger', '');
+            pluginDir = pluginDir.replace('/src/commands/mzpr/swagger', '');
             const jarPath = join(
                 pluginDir,
                 'resources',
-                'swagger-codegen-cli.jar'
+                'openapi-generator-cli.jar'
             );
             let script = `java -jar ${jarPath} generate -i ${this.flags.path} -l apex -o ${this.flags.outputdir} ${overwrite}`;
             if (this.flags.apiVersion) {

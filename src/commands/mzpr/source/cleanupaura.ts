@@ -25,12 +25,12 @@ export default class SourceCleanupAura extends SfdxCommand {
         '<?xmlversion="1.0"encoding="UTF-8"standalone="no"?><svgwidth="120px"height="120px"viewBox="00120120"version="1.1"xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"><gstroke="none"stroke-width="1"fill="none"fill-rule="evenodd"><pathd="M120,108C120,114.6114.6,120108,120L12,120C5.4,1200,114.60,108L0,12C0,5.45.4,012,0L108,0C114.6,0120,5.4120,12L120,108L120,108Z"id="Shape"fill="#2A739E"/><pathd="M77.7383308,20L61.1640113,20L44.7300055,63.2000173L56.0543288,63.2000173L40,99.623291L72.7458388,54.5871812L60.907727,54.5871812L77.7383308,20Z"id="Path-1"fill="#FFFFFF"/></g></svg>';
 
     public static examples = [
-        `$ sfdx muenzpraeger:source:cleanupaura
+        `$ sfdx mzpr:source:cleanupaura
      Make sure that your git commits are up-to-date before you proceed. Do you want to delete boilerplate Aura related files that have not been modified? (y/N) y
      Reading content of package directories
      36 non-modified boilerplate Aura files have been deleted in package directory 'force-app'.
   `,
-        `$ sfdx muenzpraeger:source:cleanupaura -p
+        `$ sfdx mzpr:source:cleanupaura -p
      Reading content of package directories
      36 non-modified boilerplate Aura files have been deleted in package directory 'force-app'.
 `

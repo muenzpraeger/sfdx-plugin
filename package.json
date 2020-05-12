@@ -1,7 +1,7 @@
 {
     "name": "@muenzpraeger/sfdx-plugin",
     "description": "A plugin for the Salesforce CLI built by René Winkelmeyer.",
-    "version": "0.3.0",
+    "version": "0.5.0",
     "author": "René Winkelmeyer @muenzpraeger",
     "bugs": "https://github.com/muenzpraeger/sfdx-plugin/issues",
     "dependencies": {
@@ -36,10 +36,11 @@
         "typescript": "3.8"
     },
     "engines": {
-        "node": ">=8.0.0"
+        "node": ">=10.0.0"
     },
     "files": [
         ".oclif.manifest.json",
+        "package-lock.json",
         "/lib",
         "/messages",
         "/resources"
