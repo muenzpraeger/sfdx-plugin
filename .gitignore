@@ -2,4 +2,5 @@
 .images
 .sfdx
 .vscode
+lib
 node_modules
