@@ -28,7 +28,7 @@
         "eslint": "^7.0.0",
         "globby": "11",
         "husky": "^4.2.5",
-        "lint-staged": "^10.2.4",
+        "lint-staged": "^10.2.6",
         "prettier": "^2.0.5",
         "sinon": "9",
         "ts-node": "8",
