@@ -19,7 +19,7 @@
         "@oclif/dev-cli": "1",
         "@oclif/plugin-help": "3",
         "@oclif/test": "^1.2.6",
-        "@salesforce/dev-config": "1.6.0",
+        "@salesforce/dev-config": "2.0.0",
         "@types/chai": "4",
         "@types/jsforce": "1.9.18",
         "@types/mocha": "8",
