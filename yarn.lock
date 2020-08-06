@@ -296,17 +296,17 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
-"@types/jsforce@1.9.19":
-  version "1.9.19"
-  resolved "https://registry.yarnpkg.com/@types/jsforce/-/jsforce-1.9.19.tgz#de51cbe7b684a660bff6a5e0485d90bf5c110de6"
-  integrity sha512-fB88qUXsX1cAG/WfXsa8yQ7/Hmegl/6Q3lLK0cwmQqfJ38B7qigcWYizsW22LZBZ1ikxxzNZAG2F+dvd52outA==
-  dependencies:
-    "@types/node" "*"
-
 "@types/jsforce@1.9.2":
   version "1.9.2"
   resolved "https://registry.yarnpkg.com/@types/jsforce/-/jsforce-1.9.2.tgz#a321866dcb7c9c4c57a1d794d54ec52e3f07ff0b"
   integrity sha512-ZRRPNf/e44QnFI8VEsPxzrM/+Y5vx/HGsMI8qE4JvBHDkSfoFWAdZ93uW6Oh3sHmcoShexcoTH9gufihTgYBLQ==
+
+"@types/jsforce@1.9.20":
+  version "1.9.20"
+  resolved "https://registry.yarnpkg.com/@types/jsforce/-/jsforce-1.9.20.tgz#7bd379c9bdc499973814d8948dbc2ef5fa4f8d2a"
+  integrity sha512-eeQ3WynhRhK1JLi0WzILHkHalYBEcf1NhQWk9l30S9UqIy6Df/OOOJGYjORSLBsuF8dNWxKVWMRNsSktXmXh6A==
+  dependencies:
+    "@types/node" "*"
 
 "@types/lodash@*":
   version "4.14.150"
