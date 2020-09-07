@@ -8,7 +8,7 @@
         "@oclif/command": "1",
         "@oclif/config": "1",
         "@oclif/errors": "1",
-        "@salesforce/command": "^3.0.1",
+        "@salesforce/command": "^3.0.3",
         "@types/fs-extra": "^9.0.1",
         "@types/recursive-readdir": "^2.2.0",
         "fs-extra": "^9.0.1",
