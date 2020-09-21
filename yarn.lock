@@ -310,10 +310,10 @@
   resolved "https://registry.yarnpkg.com/@types/jsforce/-/jsforce-1.9.2.tgz#a321866dcb7c9c4c57a1d794d54ec52e3f07ff0b"
   integrity sha512-ZRRPNf/e44QnFI8VEsPxzrM/+Y5vx/HGsMI8qE4JvBHDkSfoFWAdZ93uW6Oh3sHmcoShexcoTH9gufihTgYBLQ==
 
-"@types/jsforce@1.9.20":
-  version "1.9.20"
-  resolved "https://registry.yarnpkg.com/@types/jsforce/-/jsforce-1.9.20.tgz#7bd379c9bdc499973814d8948dbc2ef5fa4f8d2a"
-  integrity sha512-eeQ3WynhRhK1JLi0WzILHkHalYBEcf1NhQWk9l30S9UqIy6Df/OOOJGYjORSLBsuF8dNWxKVWMRNsSktXmXh6A==
+"@types/jsforce@1.9.22":
+  version "1.9.22"
+  resolved "https://registry.yarnpkg.com/@types/jsforce/-/jsforce-1.9.22.tgz#453ba9dcadbda7656be7795ffaa0e8bb7613cd0c"
+  integrity sha512-wVMBWvcGPd3mO/UdP/+63N5KkMQUhNbqw7YGfZH9aqtaAkuYyOjsCuMuhi9AinsiFo8kl0Zp6md74xUS+fltng==
   dependencies:
     "@types/node" "*"
 
