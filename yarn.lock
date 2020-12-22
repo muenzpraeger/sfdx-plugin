@@ -324,10 +324,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/jsforce@1.9.25":
-  version "1.9.25"
-  resolved "https://registry.yarnpkg.com/@types/jsforce/-/jsforce-1.9.25.tgz#d0afdd6073694050b21ace0bf5c4c2bc0391d89f"
-  integrity sha512-f5ky9rwFopUiMSUG/6WpoPZxzZC+yNWRW4CUjbawvkzzVl7+5a97Gh0/UNsMI/trDUZ4TfO0vlyHOYw2iAqZDQ==
+"@types/jsforce@1.9.26":
+  version "1.9.26"
+  resolved "https://registry.yarnpkg.com/@types/jsforce/-/jsforce-1.9.26.tgz#62959c9edbc2fe977085eec37dea6173584b40dc"
+  integrity sha512-dCFFMJktgHfRaZwxZdkPMRzpsf4XsxPfgWq3LnyMDQhxRvWS0OYPag1qcqjHoWhATJtKfgMC/TopgN6x64EQ9w==
   dependencies:
     "@types/node" "*"
 
