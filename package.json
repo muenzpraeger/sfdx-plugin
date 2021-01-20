@@ -11,7 +11,7 @@
         "@salesforce/command": "^3.0.5",
         "@types/fs-extra": "^9.0.6",
         "@types/recursive-readdir": "^2.2.0",
-        "fs-extra": "^9.0.1",
+        "fs-extra": "^9.1.0",
         "recursive-readdir": "^2.2.2",
         "replace-in-file": "^6.1.0"
     },
