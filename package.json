@@ -30,7 +30,7 @@
         "husky": "^4.3.8",
         "lint-staged": "^10.5.4",
         "prettier": "^2.2.1",
-        "sinon": "9",
+        "sinon": "10",
         "ts-node": "9",
         "tslib": "2",
         "typescript": "4.1"
