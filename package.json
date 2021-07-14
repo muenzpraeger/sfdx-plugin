@@ -23,7 +23,7 @@
         "@types/chai": "4",
         "@types/jsforce": "1.9.26",
         "@types/mocha": "8",
-        "@types/node": "14",
+        "@types/node": "16",
         "chai": "4",
         "eslint": "^7.19.0",
         "globby": "11",
